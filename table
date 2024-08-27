@@ -1,0 +1,484 @@
+-- // i update this table like daily lmfao.
+-- // org: fault
+-- // in skidding we trust.. (ong i lied)
+getgenv().help = {
+    ['i think they hate me'] = { -- // ['i think they hate me'] = { -- // Loader
+        Intro     = false,     
+        AntiFling     = true,
+        Fixes = {
+            DrawingLibrary     = false,
+            OptimizeFPS     = false,
+            BoostFPS     = false,
+            RemoveErrors     = false,
+        },
+        DeveloperMode = false, -- // basically if u need dark dex or remote spy.
+        DevOptions = {
+            RemoteSpy = false,
+            DarkDex = false,
+        },
+        Commands = {
+            Enabled     = true,
+            Rejoin     = ".rejoin",
+        },
+        Textures = {
+            Enabled     = true,
+            PresetTextures = {
+                Enabled     = true,
+                Preset     = "Minecraft" -- // Minecraft, (More Soon)
+            },
+            Custom = {
+                Enabled     = false,
+                CustomTextures = { 
+                    Wood     = "3258599312", 
+                    WoodPlanks     = "8676581022", 
+                    Brick     = "8558400252", 
+                    Cobblestone     = "5003953441", 
+        			Concrete     = "7341687607", 
+                    DiamondPlate     = "6849247561", 
+                    Fabric     = "118776397", 
+                    Granite     = "4722586771", 
+                    Grass     = "4722588177", 
+                    Ice     = "3823766459", 
+                    Marble     = "62967586", 
+                    Metal     = "62967586", 
+                    Sand     = "152572215" 
+                }
+            }
+        }
+    },
+    ['still been neglected'] = { -- // ['still been neglected'] = { -- // Streamable = {
+        Global = {
+            Checks = {
+                Friend     = false,
+                Crew     = false,
+            },
+        },
+        Protection = {
+            Safety     = false
+        },
+        Redirection = {
+            Enabled     = true, 
+            Prediction     = 0.150, 
+            HitChance     = 100,
+            AntiAimViewer     = false,
+            ClosestPoint     = true,
+            AntiGroundShots     = true, 
+            AntiGroundValue     = 0.15,
+            AntiGroundActivation     = -10, 
+            Part     = "HumanoidRootPart",
+                
+            AntiCurve = {
+                Enabled     = true,
+            },
+            GunSettings = {
+                Enabled     = false,
+                DistanceDetections = {
+                    Close     = 35,
+                    Mid     = 65,
+                    Far     = math.huge
+                },
+                Pistols = {
+                    Prediction = { 
+                        Close     = 0.1185, 
+                        Mid     = 0.1165, 
+                        Far     = 0.105 
+                    },
+                    HitChance = { 
+                        Close     = 100, 
+                        Mid     = 100, 
+                        Far     = 100 
+                    }
+                },
+                Shotguns = {
+                    Prediction = { 
+                        Close     = 0.1225, 
+                        Mid     = 0.12, 
+                        Far     = 0.115 
+                    },
+                    HitChance = { 
+                        Close     = 100, 
+                        Mid     = 100, 
+                        Far     = 100 
+                    }
+                },
+                Automatics = {
+                    Prediction = { 
+                        Close     = 0.13, 
+                        Mid     = 0.1256, 
+                        Far     = 0.12125 
+                    },
+                    HitChance = { 
+                        Close     = 25, 
+                        Mid     = 50, 
+                        Far     = 75 
+                    }
+                },
+                Other = {
+                    Prediction = { 
+                        Close     = 0.13, 
+                        Mid     = 0.1256, 
+                        Far     = 0.12125 
+                    },
+                    HitChance = { 
+                        Close     = 25, 
+                        Mid     = 50, 
+                        Far     = 75 
+                    }
+                }
+            }
+        },
+        TriggerBot = {
+            Enabled     = false,
+            Prediction     = 0.124,
+            Delay     = 0.001,
+            GunPredictionSettings = {
+                Enabled     = false,
+                DistanceDetections = {
+                    Close     = 35,
+                    Mid     = 65,
+                    Far     = math.huge
+                },
+                Pistols = { 
+                    Close     = 0.13, 
+                    Mid     = 0.1256, 
+                    Far     = 0.12125 
+                },
+                Shotguns = { 
+                    Close     = 0.132, 
+                    Mid     = 0.127, 
+                    Far     = 0.124 
+                },
+                Automatics = { 
+                    Close     = 0.132, 
+                    Mid     = 0.1256, 
+                    Far     = 0.1254 
+                },
+                Other = { 
+                    Close     = 0.132, 
+                    Mid     = 0.1256, 
+                    Far     = 0.1254 
+                }
+            }
+        },
+        Inventory = {
+            Enabled     = true,
+            SortFood     = false,
+            
+            Assortment = {
+                [5]     = '[Knife]',
+                [3]     = '[TacticalShotgun]',
+                [2]     = '[Double-Barrel SG]',
+                [1]     = '[Revolver]',
+                [4]     = '',
+                [6]     = '',
+                [7]     = '',
+                [8]     = '',
+                [9]     = '',
+                [10]     = '',
+            },
+        },
+        Visuals = {
+            Enabled     = true,
+            HitDetection = {
+                Enabled     = false, 
+                Color     = Color3.fromRGB(255, 0, 0)
+            },
+            HitTracers = {
+                Enabled     = false,
+                Color1     = Color3.fromRGB(1, 2, 3),
+                Color2     = Color3.fromRGB(253, 254, 255),
+                Duration     = 1,
+                EnableFade     = true,
+                FadeDuration     = 0.5            
+            },
+            HitImpacts = {
+                Enabled     = true,
+                Color     = Color3.fromRGB(255, 251, 251),
+                Size     = 10,
+                Duration     = 2,
+                EnableFade     = true,
+                FadeDuration     = 0.5
+            },
+            HitSounds = {
+                Enabled     = false,
+                Sound     = "Minecraft", -- // (RIFK7, Bubble, Minecraft, Cod, Bameware, Neverlose, Gamesense, Rust)
+                SoundVolume     = 5,
+            },
+            HitChams = {
+                Enabled     = false,
+                Color     = Color3.fromRGB(255, 0, 0),
+                Transparency     = 0.5,
+                Duration     = 0.1
+            },
+            HitEffects = {
+                Enabled     = true,
+                Color     = Color3.fromRGB(255, 255, 255),
+                Effect     = "Confetti" -- // (Confetti, Bubble)
+            },
+            HitNotify = {
+                Enabled     = false,
+                Duration     = 1
+            }
+        },
+        Misc = {
+            Macro     = true,
+            Debug     = true,
+            NoSlow     = true,
+            NoJumpCooldown     = true,
+            NoRecoil     = true,
+            Tracer = {
+                Enabled     = false,
+                Color   = Color3.fromRGB(255, 255, 255),
+                From    = 'Bottom' -- Bottom, Mouse
+            },
+            AutoBuy = {
+                Armor = {
+                    Enabled     = true,
+                    MinimumMediumArmor     = 47, -- 48 is Maximum
+                    MinimumHighArmor     = 61, -- 62 is Maximum
+                    MinimumFireArmor     = 94, -- 95 is Maximum
+                },
+                Guns = {
+                    ['[Revolver]']         = {
+                        Enabled     = true, 
+                        MinAmmo     = 150
+                    },
+                    ['[Double-Barrel SG]'] = {
+                        Enabled     = true, 
+                        MinAmmo     = 40
+                    },
+                    ['[TacticalShotgun]'] = {
+                        Enabled     = true, 
+                        MinAmmo     = 40
+                    },
+                },
+            },
+        },
+        AutoPredictions = {
+            Enabled     = true,
+            Preset     = "Automatic", -- // (Manual, Automatic)
+            AutomaticVersion     = "V4", -- // (V1, V2, V3, V4, V5, Advanced)
+            AdvanceDistances = {
+                Close     = 25, 
+                Mid     = 45, 
+                Far     = 85
+            },
+            ManualPredictions = {
+                RefreshRate     = 0.1, 
+                Sets = {
+                    [30]     = 0.0852, [40]     = 0.10023, [50]     = 0.11526, 
+                    [60]     = 0.1357, [70]     = 0.1320, [80]     = 0.138, 
+                    [90]     = 0.142007, [100]     = 0.141987, [110]     = 0.1512, 
+                    [120]     = 0.1532, [130]     = 0.1612, [140]     = 0.1684
+                }
+            },
+        },
+    },
+    ['held the wrong blade'] = { -- // ['held the wrong blade'] = { -- // BladeBall = {
+        Main = {
+            Debug     = true,
+        },
+        Local = {
+            SpeedBoost     = false,
+            InfiniteJump     = false,
+            BypassPulseAbility     = true,   
+            KickOnModJoin     = true,           
+        },
+        Combat = {
+            AutoParry     = true,
+            AutoCurveBall     = false,
+            AutoAbility     = true,
+        },
+        AI = {
+            AIAutoPlay     = false            
+        },
+        Settings = {
+            CurvingStyle     = "Up", -- // (Left, Down, Up, Right, Back, Back-Left, Back-Right, Random)
+            OnBallMove     = "Backwards", -- // (Forwards, Backwards)
+            AIFollow     = "Target", -- // (Ball, Target)            
+        },
+    },
+    ['evade away frm her'] = { -- // ['evade away frm her'] = { -- // Evade = {
+        Options = {
+            BreakBots = false,
+            BreakMapBarrier = true,
+            BotEsp = true,
+            AutoRespawn = true,
+            NoMapDamage = true,
+            ToolSpam = false,
+            AdminCommands = true,
+        }
+    },
+    ['flee frm my past actions'] = { -- // ['flee frm my past actions'] = { -- // FleeTheFacility = {
+        Tools = {
+            AntiFail     = true,
+            AutoInteract     = true,
+            BeastCam     = true,
+            AutoPlay     = false,
+            SpeedBoost     = true
+        },
+        ESP = {
+            Players     = true,
+            Pods     = false,
+            PCS     = true,
+            BestPC     = true,
+            Exits     = false            
+        },
+        Misc = {}    
+    },
+    ['kill all targets in sight'] = { -- // ['kill all targets in sight'] = { -- // KAT = {
+        Redirection = {
+            Enabled     = true,
+            WallCheck     = false,
+            ForceField     = true,
+            
+            ClosestMethod     = "Cursor", -- // (Cursor, Closest)
+        },
+        ESP = {
+            Enabled     = true, 
+            TextSize     = 16, 
+            
+            Name = {
+                Enabled     = true, 
+                OutLine     = true, 
+                Color     = Color3.fromRGB(255, 255, 255)
+            }, 
+            Box = {
+                Enabled     = false, 
+                OutLine     = true, 
+                Color     = Color3.fromRGB(255, 255, 255)
+            }, 
+
+            HealthBar = {
+                Enabled     = true, 
+                OutLine     = true, 
+                Color     = Color3.fromRGB(0, 255, 0), 
+                HealthColor     = true
+            }, 
+            HealthText = {
+                Enabled     = true, 
+                OutLine     = true, 
+                Color     = Color3.fromRGB(0, 255, 0), 
+                HealthColor     = true
+            }, 
+                            
+            Distance = {
+                Enabled     = true, 
+                OutLine     = true, 
+                Color     = Color3.fromRGB(255, 255, 255)
+            }, 
+            Tool = {
+                Enabled     = true, 
+                OutLine     = true, 
+                Color     = Color3.fromRGB(255, 255, 255)
+            }, 
+            Flags = {
+                Enabled     = true, 
+                WalkingState     = true, 
+                DesyncState     = true, 
+                OutLine     = true, 
+                Color     = Color3.fromRGB(255, 255, 255)
+            }, 
+            Tracer = {
+                Enabled     = true, 
+                Method     = "Screen", 
+                Thickness     = 1, 
+                Color     = Color3.fromRGB(255, 255, 255)
+            }, 
+        }
+    },
+    ['self hatred murdered me deeply'] = { -- // ['self hatred murdered me deeply'] = { -- // MM2 = {
+        Main = {
+            OptimizeGame     = true, 
+            Statistics     = true,
+        },
+        Redirection = {
+            Sheriff = {
+                Enabled     = true,
+                AntiGroundShots     = true,
+                AutoPrediction     = true,   
+                
+                Accuracy     = "Custom", -- // (Seismic, Overflow, Dynamic, Regular, Custom)
+                SilentPrediction     = 0.15781912,
+                JumpOffset     = 0.085,
+                FallOffset     = -0.1245,
+                AntiGroundValue     = 0.085,  
+                AntiGroundActivation     = -18,  
+            },
+            Murderer = {
+                Enabled     = true,
+                KnifeAura     = true,
+                AuraRange     = 10,
+                ClosestMethod     = "Closest", -- // (Cursor, Closest)
+            },
+        },
+        Local = {
+            AlwaysBombClutch     = true,
+            SpeedBoost     = true,
+            Emotes     = true,
+            GodMode     = false,
+            AutoDodgeMurderer     = false,
+            AntiMurderer     = false, -- // if you're murderer it resets. (made this for better stats tbh)
+        },
+        Pets = {
+            NameRandomizer     = true,
+            RandomizerDelay     = .9, -- // bigger number = longer, (by second)
+            PetNames = {
+                -- // you can add your own lines. just do another ("",) lmao
+                "",
+                "",
+                "",
+                "",
+                ""
+            }, -- // 20 chars max
+        },
+        AutoPredictions = {
+            Enabled     = true,
+            Preset     = "Automatic", -- // (Manual, Automatic)
+            AutomaticVersion     = "V4", -- // (V1, V2, V3, V4)
+            ManualPredictions = {
+                RefreshRate     = 0.1, 
+                GroundSets = {
+                    [30]     = 0.0852, [40]     = 0.10023, [50]     = 0.11526, 
+                    [60]     = 0.1357, [70]     = 0.1320, [80]     = 0.138, 
+                    [90]     = 0.142007, [100]     = 0.141987, [110]     = 0.1512, 
+                    [120]     = 0.1532, [130]     = 0.1612, [140]     = 0.1684
+                },
+                AirSets = {
+                    [30]     = -0.1130, [40]     = -0.13544, [50]     = -0.13575, [60]     = -0.13598, 
+                    [70]     = -0.13892, [80]     = -0.1403, [90]     = -0.1446, [100]     = -0.1475, 
+                    [110]     = -0.1502,
+                },
+            },            
+        },
+        ESP = {
+            Enabled     = true,
+            PlayerESP     = true,
+            GunESP     = false,
+        },
+    },
+    ['frm the streets i was so poor'] = { -- // ['frm the streets i was so poor'] = { -- // TheStreets = {
+        Universal = {
+            AutoShoot     = true,
+            AutoReset     = true,    
+        },
+        Redirection = {
+            SilentAim     = true,
+            Parts     = {"Torso"},
+        },
+        Target = {
+            Strafe     = false,
+            Ewo     = false,
+        },
+        Optimization = {
+            StretchResolution     = false,
+            Stretch = {
+                Width     = 0.65 
+            }   
+        },
+        InventorySorter = {
+            Enabled     = true,
+            List     = {"Knife","Shotty","Glock"}, -- // up to 9
+        },
+    },
+}
