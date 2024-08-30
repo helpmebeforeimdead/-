@@ -3,18 +3,29 @@
 -- // in skidding we trust.. (ong i lied)
 getgenv().help = {
     ['i think they hate me'] = { -- // ['i think they hate me'] = { -- // Loader
-        Intro     = false,     
+        Intro     = true,     
         AntiFling     = true,
         Fixes = {
             DrawingLibrary     = false,
+            RTXShaders     = true,
             OptimizeFPS     = false,
-            BoostFPS     = false,
             RemoveErrors     = false,
         },
         DeveloperMode = false, -- // basically if u need dark dex or remote spy.
         DevOptions = {
             RemoteSpy = false,
             DarkDex = false,
+        },
+        Fun = {
+            SpinBot = {
+                ["Enabled"] = true,
+                ["Speed"] = 30, -- Removed the quotes to make it a number
+                ["Custom"] = {
+                    ["Method"] = "Player", -- (Player, Camera)
+                    ["Angle"] = 340,
+                    ["Jumps"] = 3, -- // how many jumps before spinning
+                }
+            }
         },
         Commands = {
             Enabled     = true,
@@ -161,7 +172,7 @@ getgenv().help = {
             }
         },
         Inventory = {
-            Enabled     = true,
+            Enabled     = false,
             SortFood     = false,
             
             Assortment = {
@@ -178,7 +189,7 @@ getgenv().help = {
             },
         },
         Visuals = {
-            Enabled     = true,
+            Enabled     = false,
             HitDetection = {
                 Enabled     = false, 
                 Color     = Color3.fromRGB(255, 0, 0)
@@ -223,9 +234,22 @@ getgenv().help = {
         Misc = {
             Macro     = true,
             Debug     = true,
-            NoSlow     = true,
+            NoSlow     = false,
             NoJumpCooldown     = true,
             NoRecoil     = true,
+            Raid = {
+                Enabled     = true,
+                Keybind     = 'Z',
+        
+                SnipeDetection     = true, -- if true it will automatically enable esp on players who joined you.
+                TargetRaidPlayers     = false, -- Aimbots will only target raid marked players
+                GrabRadius         = 200, -- The distance of how far players can be from your mouse to select the player.
+        
+                Colors = {
+                    ESP     = Color3.fromRGB(15, 23, 255), 
+                    Friendly     = Color3.fromRGB(0, 255, 0)
+                }
+            },
             Tracer = {
                 Enabled     = false,
                 Color   = Color3.fromRGB(255, 255, 255),
@@ -233,7 +257,7 @@ getgenv().help = {
             },
             AutoBuy = {
                 Armor = {
-                    Enabled     = true,
+                    Enabled     = false,
                     MinimumMediumArmor     = 47, -- 48 is Maximum
                     MinimumHighArmor     = 61, -- 62 is Maximum
                     MinimumFireArmor     = 94, -- 95 is Maximum
@@ -398,12 +422,12 @@ getgenv().help = {
                 AntiGroundShots     = true,
                 AutoPrediction     = true,   
                 
-                Accuracy     = "Custom", -- // (Seismic, Overflow, Dynamic, Regular, Custom)
+                Accuracy     = "Overflow", -- // (Seismic, Overflow, Dynamic, Regular, Custom, Best)
                 SilentPrediction     = 0.15781912,
                 JumpOffset     = 0.085,
                 FallOffset     = -0.1245,
-                AntiGroundValue     = 0.085,  
-                AntiGroundActivation     = -18,  
+                AntiGroundValue     = 0.25,  
+                AntiGroundActivation     = -15,  
             },
             Murderer = {
                 Enabled     = true,
@@ -418,19 +442,53 @@ getgenv().help = {
             Emotes     = true,
             GodMode     = false,
             AutoDodgeMurderer     = false,
+            NoBombCoolDown     = false,
+            NoFireflyCoolDown     = false,
+            InfiniteBombs     = false,
+            InfiniteFireflies     = false,
             AntiMurderer     = false, -- // if you're murderer it resets. (made this for better stats tbh)
         },
         Pets = {
             NameRandomizer     = true,
             RandomizerDelay     = .9, -- // bigger number = longer, (by second)
             PetNames = {
-                -- // you can add your own lines. just do another ("",) lmao
-                "",
-                "",
-                "",
-                "",
-                ""
-            }, -- // 20 chars max
+                "i think they hate me",
+                "geekd up crazy",
+                "dey tried to hurt me",
+                "save me or lose me",
+                "ion got options",
+                "tape be on slow mode",
+                "jug a ham n die w it",
+                "are you there?",
+                "swear they not w/ u",
+                "stop biting",
+                "hello???",
+                "🖤🖤🖤",
+                "sawed-off shot",
+                "never miss for her",
+                "hillmurder - bless",
+                "ambi - play it out",
+                "by any means",
+                "type 2 walk in",
+                "left ur heart",
+                "on the floor",
+                "you wish",
+                "snake skin",
+                "fall back now",
+                "regardless they cant",
+                "stressin u out",
+                "stay for good",
+                "cyberia - nvr knew",
+                "i jus love music",
+                "do you remember me?",
+                "i dont think so",
+                "what if i put these on",
+                "kant save her",
+                "max characters",
+                "nothings working",
+                "please fix it all",
+                "cannot get no other"
+            }, -- // 20 chars long
         },
         AutoPredictions = {
             Enabled     = true,
@@ -449,12 +507,13 @@ getgenv().help = {
                     [70]     = -0.13892, [80]     = -0.1403, [90]     = -0.1446, [100]     = -0.1475, 
                     [110]     = -0.1502,
                 },
-            },            
+            },
+            
         },
         ESP = {
             Enabled     = true,
             PlayerESP     = true,
-            GunESP     = false,
+            GunESP     = true,
         },
     },
     ['frm the streets i was so poor'] = { -- // ['frm the streets i was so poor'] = { -- // TheStreets = {
